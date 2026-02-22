@@ -1,60 +1,8 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1761638228328,
-  "repoUrl": "https://github.com/czlonkowski/n8n-mcp",
+  "lastUpdate": 1771744699835,
+  "repoUrl": "https://github.com/a2s-ai/A2S_n8n-mcp",
   "entries": {
     "n8n-mcp Benchmarks": [
-      {
-        "commit": {
-          "author": {
-            "email": "56956555+czlonkowski@users.noreply.github.com",
-            "name": "Romuald Członkowski",
-            "username": "czlonkowski"
-          },
-          "committer": {
-            "email": "noreply@github.com",
-            "name": "GitHub",
-            "username": "web-flow"
-          },
-          "distinct": true,
-          "id": "e2c8fd0125d91e6040353c1c87b765c4d1657c92",
-          "message": "Merge pull request #283 from czlonkowski/update/n8n-and-templates-20251007\n\nUpdate n8n to v1.114.3 and optimize template fetching (v2.17.2)",
-          "timestamp": "2025-10-07T15:07:43+02:00",
-          "tree_id": "d1b46d94ffd8ed49dc683e5b84deb2c1d7effa96",
-          "url": "https://github.com/czlonkowski/n8n-mcp/commit/e2c8fd0125d91e6040353c1c87b765c4d1657c92"
-        },
-        "date": 1759842584773,
-        "tool": "customSmallerIsBetter",
-        "benches": [
-          {
-            "name": "sample - array sorting - small",
-            "value": 0.0193,
-            "range": "0.2432",
-            "unit": "ms",
-            "extra": "51864 ops/sec"
-          },
-          {
-            "name": "sample - array sorting - large",
-            "value": 3.2722,
-            "range": "1.7661000000000002",
-            "unit": "ms",
-            "extra": "306 ops/sec"
-          },
-          {
-            "name": "sample - string concatenation",
-            "value": 0.0051,
-            "range": "0.3578",
-            "unit": "ms",
-            "extra": "196871 ops/sec"
-          },
-          {
-            "name": "sample - object creation",
-            "value": 0.0663,
-            "range": "0.38939999999999997",
-            "unit": "ms",
-            "extra": "15080 ops/sec"
-          }
-        ]
-      },
       {
         "commit": {
           "author": {
@@ -1626,6 +1574,37 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/czlonkowski/n8n-mcp/commit/3f427f952836fd35cb6d054a45d179d88b9cb37b"
         },
         "date": 1761638228013,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "sample - array sorting - small",
+            "value": 0.0136,
+            "range": "0.3096",
+            "unit": "ms",
+            "extra": "73341 ops/sec"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "56956555+czlonkowski@users.noreply.github.com",
+            "name": "Romuald Członkowski",
+            "username": "czlonkowski"
+          },
+          "committer": {
+            "email": "noreply@github.com",
+            "name": "GitHub",
+            "username": "web-flow"
+          },
+          "distinct": true,
+          "id": "87f26eef1847852b0f8907b11014001ef4074fd9",
+          "message": "fix: comprehensive param type coercion for Claude Desktop/Claude.ai (#605) (#609)\n\nExpand coerceStringifiedJsonParams() to handle ALL type mismatches,\nnot just stringified objects/arrays. Testing showed 6/9 tools still\nfailing in Claude Desktop after v2.35.4.\n\n- Coerce string→number, string→boolean, number→string, boolean→string\n- Add safeguard for entire args object arriving as JSON string\n- Add [Diagnostic] section to error responses with received arg types\n- Bump to v2.35.5\n- 24 unit tests (9 new)\n\nConceived by Romuald Czlonkowski - https://www.aiadvisors.pl/en\n\nCo-authored-by: Claude Opus 4.6 <noreply@anthropic.com>",
+          "timestamp": "2026-02-22T07:07:30+01:00",
+          "tree_id": "a2b3f1b9d290f4a5565bc9bc3b5dfaace4551cfd",
+          "url": "https://github.com/a2s-ai/A2S_n8n-mcp/commit/87f26eef1847852b0f8907b11014001ef4074fd9"
+        },
+        "date": 1771744699576,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
